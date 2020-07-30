@@ -1,0 +1,16 @@
+[Unit]
+Description="QOOBER API"
+
+[Service]
+ExecStart=/usr/bin/node index.js
+WorkingDirectory=/var/www/api.wallet.qoober
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=QooberApi
+User=qoober
+Group=qoober
+
+[Install]
+WantedBy=multi-user.target
